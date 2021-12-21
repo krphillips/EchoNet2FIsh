@@ -50,7 +50,6 @@ dfPlot <- function(df, mcex=1.2, cex=0.8, ...) {
                 plot.default(x[is.finite(x)], xlab="Row", ylab="",
                   main=name, cex.main=mcex)
 
-                }
               }
             }
           }
