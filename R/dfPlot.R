@@ -52,7 +52,7 @@ dfPlot <- function(df, mcex=1.2, cex=0.8, ...) {
                     } else {
                       if(is.character(x)) {
                          plot(as.factor(x), main=name, cex.main=mcex)
-              }
+              
             }
           }
         }
