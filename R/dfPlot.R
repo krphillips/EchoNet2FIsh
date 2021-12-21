@@ -36,7 +36,7 @@ dfPlot <- function(df, mcex=1.2, cex=0.8, ...) {
       if(is.factor(x)) {
         plot(x, main=name, cex.main=mcex)
       } else {
-        if(is.character(x) & length(unique(x)) <= 300) {
+        if(is.character(x) & length(unique(x)) <= 50) {
           plot(as.factor(x), main=name, cex.main=mcex)
         } else {
           if(is.numeric(x) & sum(is.finite(x)) < 2) {
@@ -49,10 +49,7 @@ dfPlot <- function(df, mcex=1.2, cex=0.8, ...) {
               if(is.numeric(x)) {
                 plot.default(x[is.finite(x)], xlab="Row", ylab="",
                   main=name, cex.main=mcex)
-              } else {
-                if(is.character(x)) {
-                  plot(1, 1, type="n", xlab="", ylab="", axes=F,
-                    main=paste0(name, ": character"), cex.main=mcex)
+
                 }
               }
             }
